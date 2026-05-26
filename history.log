@@ -5,3 +5,8 @@
 2026-05-25 22:41:54 | [EXPORT_CSV] args=('tasks_report.csv',)
 2026-05-25 22:51:14 | [AUTO_BLOCK_OVERDUE] args=()
 2026-05-26 19:27:20 | [ADD_TASK] args=(BugReport('відхилення оплати', priority=2, TODO),)
+2026-05-26 19:56:13 | [AUTO_BLOCK_OVERDUE] args=()
+2026-05-26 20:01:30 | [ADD_TASK] args=(BugReport('помилка інтерфейсу', priority=4, TODO),)
+2026-05-26 20:09:21 | [ADD_TASK] args=(FeatureRequest('кнопка для перемикання дизайну сайту з світлого на темний', priority=6, TODO),)
+2026-05-26 20:12:51 | [EXPORT_CSV] args=('tasks_report.csv',)
+2026-05-26 20:23:46 | [ADD_TASK] args=(BugReport('не відкривається меню', priority=3, TODO),)
