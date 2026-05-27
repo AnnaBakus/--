@@ -155,12 +155,13 @@ class Task:
 
 
 class BugReport(Task):
-    pass
+    def __str__(self):
+        return f"[BUG] {super().__str__()}"
 
 
 class FeatureRequest(Task):
-    pass
-
+    def __str__(self):
+        return f"[FEATURE] {super().__str__()}"
 
 # ─────────────────────────────────────────────
 #  1. ФУНКТОР
