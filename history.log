@@ -10,3 +10,9 @@
 2026-05-26 20:09:21 | [ADD_TASK] args=(FeatureRequest('кнопка для перемикання дизайну сайту з світлого на темний', priority=6, TODO),)
 2026-05-26 20:12:51 | [EXPORT_CSV] args=('tasks_report.csv',)
 2026-05-26 20:23:46 | [ADD_TASK] args=(BugReport('не відкривається меню', priority=3, TODO),)
+2026-05-27 14:32:12 | [AUTO_BLOCK_OVERDUE] args=()
+2026-05-27 14:33:38 | [ADD_TASK] args=(FeatureRequest('зміна теми на світлу та темну', priority=6, TODO),)
+2026-05-28 13:07:14 | [STATUS CHANGE] user='Анна Бакус' | task='помилка інтерфейсу' | TODO → IN_PROGRESS
+2026-05-28 13:07:14 | [STATUS_CHANGE] args=(0, <Status.IN_PROGRESS: 'IN_PROGRESS'>, 'Анна Бакус')
+2026-05-28 13:18:18 | [AUTO_BLOCK_OVERDUE] args=()
+2026-06-03 11:26:49 | [AUTO_BLOCK_OVERDUE] args=()

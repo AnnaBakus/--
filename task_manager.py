@@ -153,16 +153,26 @@ class Task:
     def __repr__(self):
         return f"{self.__class__.__name__}('{self._title}', priority={self._priority}, {self.status.name})"
 
+    # ── Поліморфізм: розрахунок складності ────
+    def calculate_complexity(self) -> float:
+        """Базовий розрахунок складності завдання."""
+        return round(self._priority * 2.5, 2)
 
 class BugReport(Task):
     def __str__(self):
         return f"[BUG] {super().__str__()}"
 
+    def calculate_complexity(self) -> float:
+        """Баги складніші — підвищений коефіцієнт 1.5."""
+        return round(self._priority * 2.5 * 1.5, 2)
 
 class FeatureRequest(Task):
     def __str__(self):
         return f"[FEATURE] {super().__str__()}"
 
+    def calculate_complexity(self) -> float:
+        """Фічі менш критичні — коефіцієнт 1.2."""
+        return round(self._priority * 2.5 * 1.2, 2)
 # ─────────────────────────────────────────────
 #  1. ФУНКТОР
 # ─────────────────────────────────────────────
@@ -174,8 +184,7 @@ class TaskComplexityAnalyzer:
 
     def __call__(self, task: Task) -> float:
         self.analyzed_count += 1
-        type_multiplier = 1.5 if isinstance(task, BugReport) else 1.2
-        complexity = task.priority * self.base_multiplier * type_multiplier
+        complexity = task.calculate_complexity()  # поліморфний виклик
         self.total_complexity += complexity
         return complexity
 
@@ -379,7 +388,7 @@ class TaskManager:
                 "Складність", "Виконавець", "Дедлайн", "Створено"
             ])
             for task in self._tasks:
-                complexity = task.priority * 2.5 * (1.5 if isinstance(task, BugReport) else 1.2)
+                complexity = task.calculate_complexity()
                 writer.writerow([
                     task.title,
                     task.__class__.__name__,
