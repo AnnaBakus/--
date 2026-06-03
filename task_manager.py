@@ -149,7 +149,8 @@ class Task:
             f"{assignee_str}"
             f"{deadline_str}"
         )
-
+    
+# ── (продовження класу Task) ──────────────
     def __repr__(self):
         return f"{self.__class__.__name__}('{self._title}', priority={self._priority}, {self.status.name})"
 
