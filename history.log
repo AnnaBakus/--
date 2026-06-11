@@ -16,3 +16,8 @@
 2026-05-28 13:07:14 | [STATUS_CHANGE] args=(0, <Status.IN_PROGRESS: 'IN_PROGRESS'>, 'Анна Бакус')
 2026-05-28 13:18:18 | [AUTO_BLOCK_OVERDUE] args=()
 2026-06-03 11:26:49 | [AUTO_BLOCK_OVERDUE] args=()
+2026-06-10 19:42:02 | [AUTO_BLOCK_OVERDUE] args=()
+2026-06-10 19:45:07 | [ADD_TASK] args=(BugReport('текст повідомлення не відображається', priority=3, TODO),)
+2026-06-10 19:46:58 | [ADD_TASK] args=(FeatureRequest('додати функцію зміни мови', priority=4, TODO),)
+2026-06-10 19:48:55 | [STATUS CHANGE] user='Анна Бакус' | task='помилка інтерфейсу' | TODO → IN_PROGRESS
+2026-06-10 19:48:55 | [STATUS_CHANGE] args=(0, <Status.IN_PROGRESS: 'IN_PROGRESS'>, 'Анна Бакус')
