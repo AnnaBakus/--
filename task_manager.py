@@ -137,7 +137,8 @@ class Task:
     def __str__(self):
         deadline_str = ""
         if self.deadline:
-            overdue = self.deadline < datetime.now() and self.status != Status.DONE
+            now = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+            overdue = self.deadline < now and self.status != Status.DONE
             mark = " ⚠ ПРОСТРОЧЕНО" if overdue else f" (до {self.deadline.strftime('%d.%m.%Y')})"
             deadline_str = mark
         assignee_str = f" → {self.assignee}" if self.assignee else ""
