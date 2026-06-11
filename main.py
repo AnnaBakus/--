@@ -209,9 +209,12 @@ if __name__ == "__main__":
                     user    = input("  Ваше ім'я (для логу): ").strip() or "system"
                     blocked = manager.auto_block_overdue(user=user)
                     if blocked:
-                        print(f"\n  ⚠  Заблоковано {blocked} завдань!")
+                         print(f"\n  ⚠  Заблоковано {blocked} завдань!")
+                         print("\n  Список заблокованих:")
+                         for task in manager.filter_by_status(Status.BLOCKED):
+                             print(f"    {task}")
                     else:
-                        print("\n  ✔ Прострочених завдань немає.")
+                         print("\n  ✔ Прострочених завдань немає.")
  
                 # ── 9. Зберегти ────────────────────────────
                 case "9":
