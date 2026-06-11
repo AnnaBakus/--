@@ -271,9 +271,6 @@ class TaskManager:
     def __len__(self) -> int:
         return len(self._tasks)
 
-    def get_all_tasks(self) -> List[Task]:
-        return self._tasks
-
     def generate_tasks_by_pages(self, page_size: int):
         for i in range(0, len(self._tasks), page_size):
             yield self._tasks[i : i + page_size]
@@ -317,7 +314,7 @@ class TaskManager:
         top3 = sorted(self._tasks, key=lambda t: t.priority, reverse=True)[:3]
 
         # 9. Прострочені
-        now = datetime.now()
+        now = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
         overdue = [
             t for t in self._tasks
             if t.deadline and t.deadline < now and t.status != Status.DONE
@@ -334,7 +331,7 @@ class TaskManager:
     # ── 9. Авто-блокування прострочених ───────
     @log_action("AUTO_BLOCK_OVERDUE")
     def auto_block_overdue(self, user: str = "system"):
-        now = datetime.now()
+        now = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
         count = 0
         for task in self._tasks:
             if (

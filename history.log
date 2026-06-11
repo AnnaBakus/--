@@ -21,3 +21,23 @@
 2026-06-10 19:46:58 | [ADD_TASK] args=(FeatureRequest('додати функцію зміни мови', priority=4, TODO),)
 2026-06-10 19:48:55 | [STATUS CHANGE] user='Анна Бакус' | task='помилка інтерфейсу' | TODO → IN_PROGRESS
 2026-06-10 19:48:55 | [STATUS_CHANGE] args=(0, <Status.IN_PROGRESS: 'IN_PROGRESS'>, 'Анна Бакус')
+2026-06-11 08:30:40 | [STATUS CHANGE] user='system' | task='помилка інтерфейсу' | TODO → BLOCKED
+2026-06-11 08:30:40 | [AUTO_BLOCK_OVERDUE] args=()
+2026-06-11 10:22:29 | [STATUS CHANGE] user='system' | task='помилка інтерфейсу' | TODO → BLOCKED
+2026-06-11 10:22:29 | [AUTO_BLOCK_OVERDUE] args=()
+2026-06-11 10:23:32 | [ADD_TASK] args=(BugReport('не працює кнопка при натисканні', priority=5, TODO),)
+2026-06-11 10:24:32 | [STATUS CHANGE] user='Анна Бакус' | task='кнопка для перемикання дизайну сайту з світлого на темний' | TODO → DONE
+2026-06-11 10:24:32 | [STATUS_CHANGE] args=(1, <Status.DONE: 'DONE'>, 'Анна Бакус')
+2026-06-11 10:25:09 | [ADD_TASK] args=(FeatureRequest('додати зміну мови', priority=3, TODO),)
+2026-06-11 10:26:29 | [STATUS CHANGE] user='Анна Бакус' | task='не працює кнопка при натисканні' | TODO → DONE
+2026-06-11 10:26:29 | [STATUS_CHANGE] args=(2, <Status.DONE: 'DONE'>, 'Анна Бакус')
+2026-06-11 10:32:01 | [AUTO_BLOCK_OVERDUE] args=()
+2026-06-11 10:33:00 | [EXPORT_CSV] args=('tasks_report.csv',)
+2026-06-11 10:38:28 | [AUTO_BLOCK_OVERDUE] args=()
+2026-06-11 10:39:19 | [ADD_TASK] args=(BugReport('иии', priority=3, TODO),)
+2026-06-11 10:40:01 | [AUTO_BLOCK_OVERDUE] args=()
+2026-06-11 10:40:24 | [ADD_TASK] args=(BugReport('рори', priority=3, TODO),)
+2026-06-11 10:40:52 | [AUTO_BLOCK_OVERDUE] args=()
+2026-06-11 10:47:58 | [STATUS CHANGE] user='Анна Бакус' | task='додати зміну мови' | TODO → IN_PROGRESS
+2026-06-11 10:47:58 | [STATUS_CHANGE] args=(3, <Status.IN_PROGRESS: 'IN_PROGRESS'>, 'Анна Бакус')
+2026-06-11 10:50:47 | [AUTO_BLOCK_OVERDUE] args=()

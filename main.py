@@ -144,8 +144,6 @@ if __name__ == "__main__":
                     if not all_tasks:
                         print("  Немає завдань!")
                     else:
-                        for i, t in enumerate(all_tasks, 1):
-                            print(f"  {i}. {t}")
                         task_idx = choose_task(all_tasks)
                         new_status = choose_status()
                         user = input("  Ваше ім'я: ").strip() or "anonymous"
