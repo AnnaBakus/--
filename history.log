@@ -41,3 +41,9 @@
 2026-06-11 10:47:58 | [STATUS CHANGE] user='Анна Бакус' | task='додати зміну мови' | TODO → IN_PROGRESS
 2026-06-11 10:47:58 | [STATUS_CHANGE] args=(3, <Status.IN_PROGRESS: 'IN_PROGRESS'>, 'Анна Бакус')
 2026-06-11 10:50:47 | [AUTO_BLOCK_OVERDUE] args=()
+2026-06-11 11:03:49 | [AUTO_BLOCK_OVERDUE] args=()
+2026-06-11 11:06:47 | [STATUS CHANGE] user='Анна Бакус' | task='рори' | TODO → IN_PROGRESS
+2026-06-11 11:06:47 | [STATUS_CHANGE] args=(4, <Status.IN_PROGRESS: 'IN_PROGRESS'>, 'Анна Бакус')
+2026-06-11 11:08:47 | [STATUS CHANGE] user='Анна Бакус' | task='рори' | IN_PROGRESS → TODO
+2026-06-11 11:08:47 | [STATUS_CHANGE] args=(4, <Status.TODO: 'TODO'>, 'Анна Бакус')
+2026-06-11 11:09:38 | [AUTO_BLOCK_OVERDUE] args=()
