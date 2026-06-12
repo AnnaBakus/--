@@ -206,15 +206,19 @@ if __name__ == "__main__":
                 # ── 8. Перевірити прострочені ──────────────
                 case "8":
                     header("Перевірка прострочених")
-                    user    = input("  Ваше ім'я (для логу): ").strip() or "system"
+                    user = input("  Ваше ім'я (для логу): ").strip() or "system"
                     blocked = manager.auto_block_overdue(user=user)
-                    if blocked:
-                         print(f"\n  ⚠  Заблоковано {blocked} завдань!")
-                         print("\n  Список заблокованих:")
-                         for task in manager.filter_by_status(Status.BLOCKED):
-                             print(f"    {task}")
+    
+                    overdue_list = manager.filter_by_status(Status.BLOCKED)
+                    if overdue_list:
+                        print(f"\n  Список прострочених завдань ({len(overdue_list)}):")
+                        for task in overdue_list:
+                            print(f"    {task}")
                     else:
-                         print("\n  ✔ Прострочених завдань немає.")
+                        print("\n  ✔ Прострочених завдань немає.")
+    
+                    if blocked:
+                        print(f"\n  ⚠  Щойно заблоковано нових: {blocked}")
  
                 # ── 9. Зберегти ────────────────────────────
                 case "9":
